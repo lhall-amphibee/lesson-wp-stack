@@ -19,8 +19,13 @@ if ( 'aside' === $post_format || 'status' === $post_format ) {
 	the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' );
 	twenty_twenty_one_post_thumbnail();
 	?>
-    <div class="meta-data">
-        <div><?php echo get_field('area') ?></div>
-        <div><?php echo get_post_meta(get_the_ID(), 'custom_date_field', true) ?></div>
+    <div class="meta-data flex justify-between">
+        <?php
+        $area_object = get_field_object('area');
+        $choices = $area_object['choices'];
+        $value = get_field('area');
+        ?>
+        <div class="project-area"><?php echo $choices[$value]; ?></div>
+        <div class="project-date"><?php echo get_post_meta(get_the_ID(), 'custom_date_field', true) ?></div>
     </div>
 </header><!-- .entry-header -->

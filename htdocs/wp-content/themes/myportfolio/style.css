@@ -32,6 +32,14 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
     gap: var(--grid-gap); /* Add a 20px gap between elements */
 }
 
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
 /* Apply the grid class to elements to create a 4-column layout */
 .grid-4 {
     flex: 0 0 calc(25% - var(--grid-gap)); /* Each element takes up 25% of the container width to create 4 columns */

@@ -12,11 +12,12 @@ Author: Loïc Hall
 Version: 1.0.0
 */
 
+require_once 'inc/ACF.php';
+require_once 'inc/Filters.php';
 require_once 'inc/PostType.php';
 require_once 'inc/Hooks.php';
 require_once 'inc/Metaboxes.php';
 require_once 'inc/Taxonomies.php';
-require_once 'inc/ACF.php';
 
 class Portfolio
 {
@@ -27,6 +28,7 @@ class Portfolio
         (new \Portfolio\Metaboxes())->register();
         (new \Portfolio\Taxonomies())->register();
         (new \Portfolio\ACF())->register();
+        (new \Portfolio\Filters())->register();
     }
 }
 

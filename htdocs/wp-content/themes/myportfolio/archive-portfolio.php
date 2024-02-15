@@ -19,6 +19,8 @@ $description = get_the_archive_description();
         <?php if ( $description ) : ?>
             <div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
         <?php endif; ?>
+        
+        <?php \Portfolio\Filters::display(); ?>
     </header><!-- .page-header -->
 
 <?php if ( have_posts() ) : ?>
